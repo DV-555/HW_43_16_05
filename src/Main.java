@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 
 public class Main {
@@ -18,21 +19,19 @@ public class Main {
     при одинаковых названиях - по автору (и там, и там - по алфавиту) */
 
     List<Book> books = new ArrayList<>();
-    books.add(new Book("Author2", "Title1", 111));
+    books.add(new Book("Author2", "Title5", 111));
     books.add(new Book("Author2", "Title2", 222));
-    books.add(new Book("Author3", "Title3", 333));
-    books.add(new Book("Author4", "Title3", 322));
-    books.add(new Book("Author1", "Title2", 333));
+    books.add(new Book("Author2", "Title3", 333));
+    books.add(new Book("Author4", "Title4", 322));
+    books.add(new Book("Author1", "Title1", 333));
     //System.out.println(books);
-
-
     Collections.sort(books, new BooksComparator());
-
-
- for (Book book : books) {
-    System.out.println(book);
+    //books.sort(new BooksComparator());
+    for (Book book : books) {
+      System.out.println(book);
+    }
   }
 }
-}
+
 
 
